@@ -73,9 +73,9 @@
         <div class="short-summary">
             <div class="left-short-summary">
                 <div>Calories Eaten</div>
-                <div>0/2,000 cal</div>
+                <div id="calories-sum"><span id="today-cals">0</span>/2,000 cal</div>
                 <div>PROGRESS BAR</div>
-                <div>2,000cal remaining</div>
+                <div id="cals-remaining">2,000 cal remaining</div>
             </div>
 
             <div class="mid-short-summary">
@@ -83,12 +83,12 @@
             </div>
 
             <div class="right-short-summary">
-                <div>MACROS</div>
+                <div>Macros</div>
 
                 <div class="macro-container">
                     <div class="macro-info">
-                        <div>PROTEIN</div>
-                        <div>GRAMS</div>
+                        <div>Protein</div>
+                        <div class="macro-fulfillment"><span>100g</span> / 200g</div>
                     </div>
 
                     <div>PROGRESS BAR</div>
@@ -96,8 +96,8 @@
 
                 <div class="macro-container">
                     <div class="macro-info">
-                        <div>CARBS</div>
-                        <div>GRAMS</div>
+                        <div>Carbs</div>
+                        <div class="macro-fulfillment"><span>100g</span> / 200g</div>
                     </div>
 
                     <div>PROGRESS BAR</div>
@@ -105,8 +105,8 @@
 
                 <div class="macro-container">
                     <div class="macro-info">
-                        <div>FAT</div>
-                        <div>GRAMS</div>
+                        <div>Fat</div>
+                        <div class="macro-fulfillment"><span>100g</span> / 200g</div>
                     </div>
 
                     <div>PROGRESS BAR</div>
@@ -116,6 +116,28 @@
         </div>
 
         <div class="home-food-log">
+            <div class="food-log-header">
+                <div class="left-header">
+                    <svg id="food-log-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>silverware-fork-knife</title>
+                        <path
+                            d="M11,9H9V2H7V9H5V2H3V9C3,11.12 4.66,12.84 6.75,12.97V22H9.25V12.97C11.34,12.84 13,11.12 13,9V2H11V9M16,6V14H18.5V22H21V2C18.24,2 16,4.24 16,6Z" />
+                    </svg>
+                    Food Log
+                </div>
+
+                <div class="right-header">
+                    <svg id="log-display" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-down</title><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                </div>
+            </div>
+
+            <div class="foods">
+
+            </div>
+
+            <div>
+                <button id="add-food"><span id="add-sign">+</span> <span>Add Food</span></button>
+            </div>
 
         </div>
 

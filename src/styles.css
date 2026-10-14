@@ -4,12 +4,12 @@
     --sidebar-background-color: rgb(233, 242, 237);
     --selected-navigation-color: rgb(218, 231, 221);
     --card-color: ;
-    --primary-gree-buttons: ;
-    --green-progress-bars: ;
+    --primary-green-buttons: rgb(86, 135, 100);
+    --green-progress-bars: rgb(112, 159, 125);
     --light-blue-accent: ;
     --dark-blue-accent: ;
     --main-text: ;
-    --muted-text: ;
+    --muted-text: rgb(99, 108, 125);
     --dividers: ;
 
     font-family:'IBM Plex Mono', monospace;
@@ -20,7 +20,7 @@
     padding: 0;
     margin: 0;
     color: black;
-    outline: 1px solid grey;
+
 }
 
 body,
@@ -90,13 +90,16 @@ svg{
 
 .right {
     background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 header{
     display: flex;
     flex-direction: column;
     gap: .25rem;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 0 2rem;
     background-color: var(--main-background-color);
 }
 
@@ -108,25 +111,116 @@ header{
 }
 
 
-.short-summary{
+.short-summary, .home-food-log{
     display: flex;
+    margin: 0rem 1.5rem;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+#today-cals {
+    font-size: 3rem;
+}
+#calories-sum {
+    color: var(--muted-text);
+    font-size: 2rem;
+    font-weight: 400;
+}
+#cals-remaining{
+    color: var(--muted-text);
+    font-size: .75rem;
 }
 
 .left-short-summary {
     display: flex;
     flex-direction: column;
+    gap: .75rem;
 }
 
 .right-short-summary {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
 }
 
 .macro-container {
     display: flex;
     flex-direction: column;
+    gap: .25rem;
+    font-weight: 500;
 }
 
 .macro-info {
     display: flex;
+    gap: 16rem;
+    justify-content: space-between;
 }
+
+.macro-fulfillment {
+    font-size: .75rem;
+    color: var(--muted-text);
+    font-weight: 400;
+}
+.macro-fulfillment > span {
+    font-weight: 600;
+}
+
+.home-food-log {
+    flex-direction: column;
+}
+
+.food-log-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-log-header > .left-header {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+.food-log-header > .right-header {
+    justify-self: right;
+}
+
+#food-log-svg {
+    padding: .5rem;
+    border-radius: 100%;
+    background-color: rgba(112, 159, 125, .5);
+    fill: rgb(75, 75, 75);
+}
+
+#log-display{
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: .5rem;
+    border-radius: 100%;
+}
+#log-display:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+#add-food {
+    color: white;
+    border: none;
+    background-color: var(--primary-green-buttons);
+    padding: .25rem 1.5rem;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: 1rem;
+}
+#add-food > span {
+    color: white;
+}
+#add-sign{
+    color: white;
+    font-size: 1.5rem;
+}
+
