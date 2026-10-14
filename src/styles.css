@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 :root {
+    --main-background-color: rgb(247, 249, 249);
+    --sidebar-background-color: rgb(233, 242, 237);
+    --selected-navigation-color: rgb(218, 231, 221);
+    --card-color: ;
+    --primary-gree-buttons: ;
+    --green-progress-bars: ;
+    --light-blue-accent: ;
+    --dark-blue-accent: ;
+    --main-text: ;
+    --muted-text: ;
+    --dividers: ;
+
     font-family:'IBM Plex Mono', monospace;
     font-weight: 600;
 }
@@ -22,23 +34,99 @@ body {
     grid-template-rows: 1fr;
 }
 
+.left {
+    background-color: var(--sidebar-background-color);
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .75rem;
+    background-color: var(--sidebar-background-color);
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    padding: 1rem 2rem;
+    background-color: var(--sidebar-background-color);
+}
+#title > div {
+    background-color: var(--sidebar-background-color);
+}
+#title > svg {
+    height: 1.75rem;
+    width: 1.75rem;
+    background-color: var(--sidebar-background-color);
 }
 
 .option{
+    font-size: .85rem;
     border-radius: .75rem;
-    padding: .5rem 3rem .5rem 1rem;
+    padding: .75rem 3rem .75rem 1rem;
     margin: .25rem 1rem;
+    background-color: var(--sidebar-background-color);
 
     display: flex;
     align-items: center;
 }
+.option:hover {
+    background-color: var(--selected-navigation-color);
+}
+.option > svg {
+    background-color: var(--sidebar-background-color);
+}
+.option:hover > svg {
+    background-color: var(--selected-navigation-color);
+}
+
 
 svg{
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
     margin-right: .5rem;
+}
+
+.right {
+    background-color: var(--main-background-color);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-background-color);
+}
+
+#today {
+    font-size: 2.5rem;
+}
+#date{
+    font-size: 1.25rem;
+}
+
+
+.short-summary{
+    display: flex;
+}
+
+.left-short-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-short-summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.macro-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.macro-info {
+    display: flex;
 }
